@@ -80,9 +80,15 @@ void task2()
     }
 }
 
+// Заготовка для задачи №3
+void task3()
+{
+}
+
 int main()
 {
     task1();
     task2();
+    task3();
     return 0;
 }
