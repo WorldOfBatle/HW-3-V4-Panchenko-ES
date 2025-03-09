@@ -38,8 +38,14 @@ void task1()
     }
 }
 
+// Заготовка для задачи №2
+void task2()
+{
+}
+
 int main()
 {
     task1();
+    task2();
     return 0;
 }
