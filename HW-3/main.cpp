@@ -115,10 +115,16 @@ void task3()
     } while (k <= 35);
 }
 
+// Заготовка для задачи №4
+void task4()
+{
+}
+
 int main()
 {
     task1();
     task2();
     task3();
+    task4();
     return 0;
 }
