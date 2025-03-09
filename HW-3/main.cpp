@@ -102,6 +102,17 @@ void task3()
             << (j - 0.2) << std::endl;
         j++;
     }
+
+    // 3) Вывод через do while
+    std::cout << "\n--- Вывод через do while ---\n";
+    int k = 25;
+    do
+    {
+        std::cout << k << " "
+            << (k + 0.5) << " "
+            << (k - 0.2) << std::endl;
+        k++;
+    } while (k <= 35);
 }
 
 int main()
