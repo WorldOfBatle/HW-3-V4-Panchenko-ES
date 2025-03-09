@@ -38,15 +38,46 @@ void task1()
     }
 }
 
-// Заготовка для задачи №2
 void task2()
 {
     std::cout << "Введите номер карты (от 6 до 14): ";
     int k = 0;
     std::cin >> k;
 
-    // Выведем то, что считали
-    std::cout << "Вы ввели k = " << k << std::endl;
+    switch (k)
+    {
+    case 14:
+        std::cout << "туз\n";
+        break;
+    case 13:
+        std::cout << "король\n";
+        break;
+    case 12:
+        std::cout << "дама\n";
+        break;
+    case 11:
+        std::cout << "валет\n";
+        break;
+    case 10:
+        std::cout << "десятка\n";
+        break;
+    case 9:
+        std::cout << "девятка\n";
+        break;
+    case 8:
+        std::cout << "восьмерка\n";
+        break;
+    case 7:
+        std::cout << "семерка\n";
+        break;
+    case 6:
+        std::cout << "шестерка\n";
+        break;
+    default:
+        // Если вдруг ввели число вне диапазона
+        std::cout << "Некорректный номер карты!\n";
+        break;
+    }
 }
 
 int main()
