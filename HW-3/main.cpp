@@ -1,5 +1,5 @@
 #include <iostream>
-#include <cmath> // для sqrt, fabs
+#include <cmath>
 
 void task1()
 {
@@ -8,14 +8,30 @@ void task1()
     double y = 0.0;
     std::cin >> x >> y;
 
-    // Вычисляем радиус (расстояние до (0,0))
     double radius = std::sqrt(x * x + y * y);
-
-    // Модуль y
     double absY = std::fabs(y);
 
-    std::cout << "Вы ввели: (" << x << ", " << y << ")\n";
-    std::cout << "radius = " << radius << ", |y| = " << absY << std::endl;
+    // Проверка на границу
+    bool isOnBoundary =
+        ((radius == 3.0 || radius == 8.0) && (absY >= 3.0)) ||
+        ((absY == 3.0) && (radius >= 3.0 && radius <= 8.0));
+
+    // Проверка на «внутри»
+    bool isInside = (radius > 3.0 && radius < 8.0) && (absY > 3.0);
+
+    // Выводим результаты
+    if (isOnBoundary)
+    {
+        std::cout << "На границе\n";
+    }
+    else if (isInside)
+    {
+        std::cout << "Внутри\n"; // точка внутри
+    }
+    else
+    {
+        std::cout << "Снаружи\n"; // точка вне
+    }
 }
 
 int main()
