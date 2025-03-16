@@ -209,6 +209,19 @@ void task6()
     std::cout << "\nТаблица значений функции:\n";
     std::cout << "   x            y\n";
     std::cout << "-----------------------\n";
+
+    // Небольшой допуск, чтобы учесть погрешности с плавающей точкой
+    const double EPS = 1e-9;
+
+    // Цикл
+    for (double x = a; x <= b + EPS; x += h)
+    {
+        // Вычисляем y
+        double y = computePiecewiseValue(x);
+
+        // Выводим пару (x, y)
+        std::cout << x << "    " << y << "\n";
+    }
 }
 
 int main()
