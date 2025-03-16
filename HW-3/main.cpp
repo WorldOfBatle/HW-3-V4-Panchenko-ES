@@ -174,6 +174,11 @@ void task5()
     }
 }
 
+// Заготовка для задачи №6
+void task6()
+{
+}
+
 int main()
 {
     task1();
@@ -182,5 +187,6 @@ int main()
     std::cout << "\n--- Переход к задаче 4 ---\n\n";
     task4();
     task5();
+    task6();
     return 0;
 }
