@@ -174,7 +174,28 @@ void task5()
     }
 }
 
-// Заготовка для задачи №6
+// Вспомогательная функция для вычисления y по кусочно-заданной формуле, для задачи №6
+double computePiecewiseValue(double x)
+{
+    double absX = std::fabs(x);
+    if (absX <= 0.1)
+    {
+        // x^3 - 0.1
+        return x * x * x - 0.1;
+    }
+    else if (absX <= 0.2)
+    {
+        // 0.2x - 0.1
+        return 0.2 * x - 0.1;
+    }
+    else
+    {
+        // x^3 + 0.1
+        return x * x * x + 0.1;
+    }
+}
+
+// Основная функция для задачи №6
 void task6()
 {
     // Считываем a, b, h
